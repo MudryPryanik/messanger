@@ -6,5 +6,4 @@ import org.springframework.stereotype.Repository
 import java.util.*
 
 @Repository
-interface MessageRepository : CrudRepository<Message, UUID> {
-}
+interface MessageRepository : CrudRepository<Message, UUID>
