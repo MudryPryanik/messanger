@@ -1,13 +1,12 @@
 package com.messenger.services
 
-import com.messenger.dto.ChatDto
 import com.messenger.dto.UserDto
-import java.util.*
+import java.util.UUID
 
 interface UserService {
-    fun registerUser(user: UserDto): UserDto?
+    fun registerUser(user: UserDto): UserDto
 
-    fun userChats(userId: UUID): Collection<ChatDto>
+    fun findUser(id: UUID): UserDto?
 
     fun findUser(username: String): UserDto?
 
