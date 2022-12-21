@@ -17,10 +17,10 @@ import java.util.*
 class Chat (
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    var id: UUID = UUID.randomUUID(),
+    var id: UUID? = null,
     @OneToMany
     @JoinColumn(name = "chat_id")
-    var messages: Collection<Message> = Collections.emptyList(),
+    var messages: Collection<Message> = emptyList(),
     @ManyToMany(fetch = FetchType.LAZY, cascade = [CascadeType.ALL])
     @JoinTable(
         name = "chats_users",

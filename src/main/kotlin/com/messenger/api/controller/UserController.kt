@@ -1,4 +1,4 @@
-package com.messenger.controller
+package com.messenger.api.controller
 
 import com.messenger.dto.UserDto
 import com.messenger.services.UserService
@@ -30,10 +30,10 @@ class UserController(
         return userService.findUser(id)
     }
 
-    @GetMapping(value = ["/users"], produces = [MediaType.APPLICATION_JSON_VALUE])
-    fun findUser(@RequestParam username: String): UserDto? {
-        return userService.findUser(username)
-    }
+//    @GetMapping(value = ["/users"], produces = [MediaType.APPLICATION_JSON_VALUE])
+//    fun findUser(@RequestParam username: String): UserDto? {
+//        return userService.findUser(username)
+//    }
 
     @GetMapping(value = ["/users"], produces = [MediaType.APPLICATION_JSON_VALUE])
     fun fundUsers(@RequestParam usernamePattern: String): Collection<UserDto> {

@@ -1,4 +1,4 @@
-package com.messenger.controller;
+package com.messenger.api.controller;
 
 import com.messenger.dto.ChatDto
 import com.messenger.dto.UserDto

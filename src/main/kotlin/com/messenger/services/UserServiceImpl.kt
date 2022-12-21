@@ -22,11 +22,11 @@ class UserServiceImpl(
     }
 
     override fun findUser(username: String): UserDto? {
-        return userRepository.findByUserName(username)?.let { userMapper.toDto(it) }
+        return userRepository.findByUsername(username)?.let { userMapper.toDto(it) }
     }
 
     override fun findUsers(usernamePattern: String): Collection<UserDto> {
-        return userRepository.findAllByUserNameLike(usernamePattern)
+        return userRepository.findAllByUsernameLike(usernamePattern)
             .stream()
             .map { userMapper.toDto(it) }
             .toList()

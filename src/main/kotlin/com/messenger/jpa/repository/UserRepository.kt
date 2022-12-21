@@ -8,7 +8,7 @@ import java.util.*
 
 @Repository
 interface UserRepository : CrudRepository<User, UUID> {
-    fun findByUserName(userName: String): User?
+    fun findByUsername(userName: String): User?
 
-    fun findAllByUserNameLike(userNamePattern: String): Collection<User>
+    fun findAllByUsernameLike(userNamePattern: String): Collection<User>
 }

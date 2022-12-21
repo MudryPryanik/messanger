@@ -19,16 +19,15 @@ import java.time.LocalDateTime
 import java.util.*
 
 @Entity
-@Table(name = "accounts")
+@Table(name = "users")
 @EntityListeners(UserListener::class)
 class User (
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     var id: UUID? = null,
-    var userName: String? = null,
+    var username: String? = null,
     var phoneNumber: String? = null,
     var password: String? = null,
-    var status: String? = null,
 
     @Enumerated(value = EnumType.STRING)
     var accountStatus: AccountStatus? = null,
